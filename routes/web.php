@@ -14,6 +14,8 @@ Route::get('/', function(){
 Route::get('/tasks', function(){
     return view('index', [
         'tasks'=> Task::all()
+        // 'tasks'=> Task::latest()->get() most recent tasks first
+        // 'tasks'=> Task::latest()->where('completed', false)->get()
     ]);
 })->name('tasks.index');
 
