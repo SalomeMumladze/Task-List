@@ -55,7 +55,13 @@
     </div>
 
     <div>
-      <button type="submit">@isset($task) ? Update Task: Add Task @endisset</button>
+      <button type="submit">
+        @isset($task)
+          Update Task
+        @else
+          Add Task
+        @endisset
+      </button>
     </div>
   </form>
 @endsection
